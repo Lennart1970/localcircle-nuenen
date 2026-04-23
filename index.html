@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LocalCircle Nuenen</title>
+  <meta name="description" content="LocalCircle Nuenen bezorgt je elke week een gratis overzicht van lokale vacatures, aanbiedingen en nieuws uit Nuenen — rechtstreeks in je Telegram." />
+  <meta property="og:title" content="LocalCircle Nuenen" />
+  <meta property="og:description" content="Gratis wekelijks overzicht van vacatures, aanbiedingen en nieuws uit Nuenen — rechtstreeks op je telefoon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:  #2D6A4F;
+      --mid:    #40916C;
+      --light-g:#74C69D;
+      --dark:   #1B2F23;
+      --text:   #1e2d1f;
+      --muted:  #5a6b5a;
+      --light:  #f4faf6;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--green) 0%, var(--mid) 100%);
+      color: white;
+      padding: 60px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.07);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -60px;
+      width: 250px; height: 250px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .logo-wrap {
+      display: inline-block;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      position: relative;
+    }
+    .hero p.sub {
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      font-weight: 300;
+      opacity: 0.92;
+      max-width: 520px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+      position: relative;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: white;
+      color: var(--green);
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 16px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      transition: transform 0.15s, box-shadow 0.15s;
+      position: relative;
+    }
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.2); }
+
+    .hero-note {
+      margin-top: 16px;
+      font-size: 0.82rem;
+      opacity: 0.75;
+      position: relative;
+    }
+
+    /* ── WAVE ── */
+    .wave { display: block; margin-top: -2px; }
+
+    /* ── FEATURES ── */
+    .features {
+      padding: 60px 24px;
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .features h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .features .lead {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 48px;
+      line-height: 1.6;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      text-align: left;
+    }
+    .card .icon { font-size: 2rem; margin-bottom: 14px; display: block; }
+    .card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .card p { font-size: 0.9rem; color: var(--muted); line-height: 1.5; }
+
+    /* ── HOW IT WORKS ── */
+    .how {
+      background: white;
+      padding: 60px 24px;
+      text-align: center;
+    }
+    .how h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 40px; }
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .step { flex: 1 1 180px; max-width: 200px; }
+    .step .num {
+      width: 48px; height: 48px;
+      background: linear-gradient(135deg, var(--green), var(--mid));
+      color: white;
+      border-radius: 50%;
+      font-weight: 800;
+      font-size: 1.2rem;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 14px;
+    }
+    .step p { font-size: 0.9rem; color: var(--muted); line-height: 1.5; }
+    .step strong { color: var(--text); }
+
+    /* ── QR SECTION ── */
+    .qr-section {
+      padding: 60px 24px;
+      text-align: center;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .qr-section h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
+    .qr-section p { color: var(--muted); margin-bottom: 28px; font-size: 0.95rem; }
+    .qr-wrap {
+      background: white;
+      border-radius: 20px;
+      padding: 24px;
+      display: inline-block;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      margin-bottom: 24px;
+    }
+    .qr-wrap img { width: 200px; height: 200px; display: block; }
+    .qr-link {
+      display: block;
+      color: var(--green);
+      font-size: 0.85rem;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    .cta-btn-green {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--green), var(--mid));
+      color: white;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 16px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(45,106,79,0.35);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .cta-btn-green:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(45,106,79,0.45); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 0.82rem;
+    }
+    footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="logo-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="110" height="110" style="border-radius:50%;box-shadow:0 8px 32px rgba(0,0,0,0.2)">
+        <defs>
+          <linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#2D6A4F"/>
+            <stop offset="100%" style="stop-color:#40916C"/>
+          </linearGradient>
+        </defs>
+        <circle cx="200" cy="200" r="200" fill="url(#lg)"/>
+        <circle cx="200" cy="95"  r="10" fill="white" opacity="0.9"/>
+        <circle cx="270" cy="118" r="8"  fill="white" opacity="0.7"/>
+        <circle cx="305" cy="185" r="10" fill="white" opacity="0.9"/>
+        <circle cx="278" cy="258" r="8"  fill="white" opacity="0.7"/>
+        <circle cx="200" cy="285" r="10" fill="white" opacity="0.9"/>
+        <circle cx="122" cy="258" r="8"  fill="white" opacity="0.7"/>
+        <circle cx="95"  cy="185" r="10" fill="white" opacity="0.9"/>
+        <circle cx="130" cy="118" r="8"  fill="white" opacity="0.7"/>
+        <path d="M200 148 C183 148 170 161 170 178 C170 200 200 228 200 228 C200 228 230 200 230 178 C230 161 217 148 200 148Z" fill="white" opacity="0.95"/>
+        <circle cx="200" cy="178" r="10" fill="url(#lg)"/>
+        <text x="200" y="338" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="white" text-anchor="middle">LocalCircle</text>
+        <text x="200" y="364" font-family="Arial,sans-serif" font-size="18" font-weight="300" fill="white" text-anchor="middle" opacity="0.8" letter-spacing="2">NUENEN</text>
+      </svg>
+    </div>
+
+    <h1>Nuenen heeft meer te bieden<br/>dan je denkt.</h1>
+    <p class="sub">Vacatures, aanbiedingen en lokaal nieuws — de meeste mensen missen het. LocalCircle houdt je op de hoogte. Eén berichtje per week, rechtstreeks in Telegram.</p>
+    <a href="https://t.me/+GdGW2JASIAo5MTU0" class="cta-btn">
+      📲 &nbsp;Gratis meedoen
+    </a>
+    <p class="hero-note">Gratis · Geen spam · Alleen Nuenen</p>
+  </section>
+
+  <svg class="wave" viewBox="0 0 1440 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:48px;width:100%;background:var(--light)">
+    <path d="M0,48 C360,0 1080,0 1440,48 L1440,0 L0,0 Z" fill="#2D6A4F" opacity="0.12"/>
+    <path d="M0,48 C480,8 960,8 1440,48 L1440,0 L0,0 Z" fill="#40916C" opacity="0.08"/>
+  </svg>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <h2>Alles lokaal. Elke week.</h2>
+    <p class="lead">Nieuwe vacatures, aanbiedingen om de hoek, activiteiten in het dorp —<br/>LocalCircle verzamelt het voor je.</p>
+    <div class="cards">
+      <div class="card">
+        <span class="icon">💼</span>
+        <h3>Vacatures</h3>
+        <p>Welke bedrijven in Nuenen zoeken personeel deze week? Wij checken het voor je.</p>
+      </div>
+      <div class="card">
+        <span class="icon">🔥</span>
+        <h3>Aanbiedingen</h3>
+        <p>Weekdeals, acties en kortingen bij lokale winkels, restaurants en dienstverleners.</p>
+      </div>
+      <div class="card">
+        <span class="icon">📧</span>
+        <h3>Nieuwsbrieven</h3>
+        <p>De beste lokale nieuwsbrieven van Nuenen op één plek — direct inschrijven.</p>
+      </div>
+      <div class="card">
+        <span class="icon">📰</span>
+        <h3>Lokaal nieuws</h3>
+        <p>Wat speelt er in Nuenen? We houden de agenda en lokale berichten bij voor je.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how">
+    <h2>Hoe het werkt</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <p><strong>Meld je aan</strong><br/>Scan de QR code of tik op de knop — je zit binnen 5 seconden in de groep.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <p><strong>Ontvang je digest</strong><br/>Elke donderdag ochtend het wekelijkse Nuenen-overzicht in je Telegram.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <p><strong>Blijf op de hoogte</strong><br/>Vacatures, deals, nieuws — geverifieerd en hyperlocaal. Deel met buren.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QR / JOIN -->
+  <section class="qr-section">
+    <h2>Doe mee met LocalCircle Nuenen</h2>
+    <p>Scan de QR code of tik op de knop hieronder</p>
+    <div class="qr-wrap">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=16&data=https%3A%2F%2Ft.me%2F%2BGdGW2JASIAo5MTU0" alt="QR code om mee te doen" />
+    </div>
+    <a class="qr-link" href="https://t.me/+GdGW2JASIAo5MTU0">t.me/+GdGW2JASIAo5MTU0</a>
+    <br/><br/>
+    <a href="https://t.me/+GdGW2JASIAo5MTU0" class="cta-btn-green">
+      📲 &nbsp;Gratis meedoen via Telegram
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 LocalCircle · <a href="https://t.me/+GdGW2JASIAo5MTU0">Nuenen, Noord-Brabant</a></p>
+    <p style="margin-top:6px">Een gratis wekelijkse buurtdigest. Geen spam, nooit.</p>
+  </footer>
+
+</body>
+</html>
