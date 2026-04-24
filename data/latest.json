@@ -1,0 +1,75 @@
+{
+  "weekNr": 18,
+  "updatedAt": "2026-04-24",
+  "vacancies": [
+    {
+      "name": "Hans Raaijmakers",
+      "description": "",
+      "url": "https://www.hansraaijmakers.nl/vacature/"
+    },
+    {
+      "name": "A. Jansen BV",
+      "description": "",
+      "url": "https://www.ajansenbv.com/"
+    },
+    {
+      "name": "Kvik Nuenen",
+      "description": "",
+      "url": "https://www.kvik.nl/carriere"
+    }
+  ],
+  "offers": [
+    {
+      "name": "Omroep Nuenen",
+      "description": "",
+      "url": "https://omroepnuenen.nl/actie"
+    },
+    {
+      "name": "Intratuin Nuenen",
+      "description": "",
+      "url": "https://www.intratuin.nl/aanbiedingen"
+    },
+    {
+      "name": "Inverta",
+      "description": "",
+      "url": "https://www.inverta.nl/aanbiedingen"
+    },
+    {
+      "name": "Jumbo Kernkwartier",
+      "description": "",
+      "url": "https://www.jumbo.com/acties/weekaanbiedingen"
+    },
+    {
+      "name": "Kvik Nuenen",
+      "description": "",
+      "url": "http://www.kvik.nl/aanbiedingen"
+    }
+  ],
+  "newsletters": [
+    {
+      "name": "WoensXL",
+      "description": "",
+      "url": "https://woensxl.nl/nieuwsbrief-sms-whatsapp/"
+    },
+    {
+      "name": "Intratuin Nuenen",
+      "description": "",
+      "url": "https://www.intratuin.nl/nieuwsbrief"
+    },
+    {
+      "name": "Inverta",
+      "description": "",
+      "url": "https://www.inverta.nl/aanmelden"
+    },
+    {
+      "name": "Jumbo Kernkwartier",
+      "description": "",
+      "url": "https://www.jumbo.com/formulieren/nieuwsbrief"
+    },
+    {
+      "name": "Kvik Nuenen",
+      "description": "",
+      "url": "https://www.kvik.nl/nieuwsbrief"
+    }
+  ]
+}
