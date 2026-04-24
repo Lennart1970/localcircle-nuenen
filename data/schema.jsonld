@@ -1,0 +1,428 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Lokale bedrijven Nuenen",
+  "description": "Overzicht van lokale ondernemers in Nuenen, Noord-Brabant",
+  "url": "https://localcircle-nuenen-production.up.railway.app/#bedrijven",
+  "numberOfItems": 22,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.coppelmans.com/",
+        "name": "Dierenkliniek Coppelmans",
+        "description": "C.O.R. Rioleringswerken is al meer dan 20 jaar gespecialiseerd in het verhelpen van verstoppingen en het reinigen, repareren en vernieuwen van afvoersystemen. Met kantoren in Beek en Donk en Weert.",
+        "url": "https://www.coppelmans.com/",
+        "telephone": "",
+        "image": "https://www.coppelmans.com/Img/header.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://slaapstudiostijn.nl/",
+        "name": "Slaapstudio Stijn",
+        "description": "",
+        "url": "https://slaapstudiostijn.nl/",
+        "telephone": "0402840013",
+        "image": "https://slaapstudiostijn.nl/wp-content/uploads/2020/03/slaapstudiostijn-kaart.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "http://www.kvik.nl/nuenen",
+        "name": "Kvik Nuenen",
+        "description": "",
+        "url": "http://www.kvik.nl/nuenen",
+        "telephone": "02782072",
+        "image": "https://cms.prd.kvik-env.com/media/venpupr4/img_6248.jpg?width=640&amp;upscale=true&amp;quality=60&amp;crop=0",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "http://www.vdstappen.nl",
+        "name": "Vdstappen",
+        "description": "Een persoonlijke uitvaart. Wij garanderen een tot in de puntjes verzorgde uitvaart, crematie of begrafenis in ons uitvaartcentrum in Eindhoven en omgeving.",
+        "url": "http://www.vdstappen.nl",
+        "telephone": "055917841",
+        "image": "http://www.vdstappen.nl/wp-content/uploads/2022/03/VDS_Greenleave.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://autobedrijfjoopvdheuvel.nl/",
+        "name": "Autobedrijf Joop v/d Heuvel",
+        "description": "",
+        "url": "https://autobedrijfjoopvdheuvel.nl/",
+        "telephone": "",
+        "image": "http://autobedrijfjoopvdheuvel.nl/web/wp-content/uploads/2014/05/Certificaat-GMTO-150x109.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.kidssociety.nl/",
+        "name": "Kidssociety",
+        "description": "",
+        "url": "https://www.kidssociety.nl/",
+        "telephone": "02139577",
+        "image": "https://www.kidssociety.nl/themes/custom/springboard/images/og_fallback.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://woensxl.nl/",
+        "name": "WoensXL",
+        "description": "De facebook pagina van WoensXL met alle belangrijke informatie over Shopping Mall WoensXL",
+        "url": "https://woensxl.nl/",
+        "telephone": "08436976155",
+        "image": "https://woensxl.nl/wp-content/uploads/2024/07/sfeerfotos-stadshart-woensel-.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.fysiovankemenade.nl",
+        "name": "Fysiotherapie Van Kemenade",
+        "description": "Fysiotherapie van Kemenade biedt fysio en manuele therapie in Nuenen en Gerwen",
+        "url": "https://www.fysiovankemenade.nl",
+        "telephone": "04588757",
+        "image": "https://images.squarespace-cdn.com/content/v1/5f317e31c748224df282dcda/a1296e73-9553-4914-87e2-184cb38e0a47/Fysiotherapie+Nuenen+%283%29.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://omroepnuenen.nl/",
+        "name": "Omroep Nuenen",
+        "description": "Heeft u nieuws en wilt u dit met de LON en geheel Nuenen delen? Laat het ons dan gerust weten. Wie weet wordt uw onderwerp gekozen voor een van onze uitzendingen!Stuur uw nieuws, voorzien van een foto in “liggend” formaat in een e-mail naar: webredactie@omroepnuenen.nl LON zend uit in de regio: via de freqentie:",
+        "url": "https://omroepnuenen.nl/",
+        "telephone": "00360563",
+        "image": "https://omroepnuenen.nl/wp-content/uploads/2022/12/Tijdelijk.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.vakgaragevandenwildenberg.nl/",
+        "name": "Vakgarage Van den Wildenberg",
+        "description": "Vakgarage Vakgarage van den Wildenberg - Uw vertrouwde partner voor betrouwbaar auto-onderhoud en reparaties in Nuenen. Altijd vertrouwd dichtbij!",
+        "url": "https://www.vakgaragevandenwildenberg.nl/",
+        "telephone": "082191781",
+        "image": "https://afhlcgnenq.cloudimg.io/v7/https://s3.eu-central-1.amazonaws.com/vakgarage-nl/cache/visual_image/8cd00430-5716-4819-a515-c5492fefef33.jpg?width=384&height=384",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "http://www.tebak.keurslager.nl",
+        "name": "Keurslager Tebak",
+        "description": "Homepage",
+        "url": "http://www.tebak.keurslager.nl",
+        "telephone": "0402842311",
+        "image": "https://tebak.keurslager.nl/template_files/website/keurslager-lokaal/img/300x300.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.hansraaijmakers.nl/",
+        "name": "Hans Raaijmakers",
+        "description": "Uitvaartzorg op maat in Geldrop, Nuenen, Eindhoven, Heeze, Waalre en omstreken waarbij uw wensen centraal staan.",
+        "url": "https://www.hansraaijmakers.nl/",
+        "telephone": "+31407808000",
+        "image": "https://www.hansraaijmakers.nl/wp-content/uploads/2025/11/Uitvaartverzorgers-Hans-Raaijmakers-Uitvaartzorg.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.decohome.nl/meulendijks-nuenen/",
+        "name": "Decohome",
+        "description": "",
+        "url": "https://www.decohome.nl/meulendijks-nuenen/",
+        "telephone": "",
+        "image": "https://www.decohome.nl/wp-content/uploads/2021/03/header-decohome-1024x254.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.dlczonwering.nl/",
+        "name": "Dlczonwering",
+        "description": "",
+        "url": "https://www.dlczonwering.nl/",
+        "telephone": "02604091518",
+        "image": "https://www.dlczonwering.nl/images/organization/512E11F532F04FB9BC3C251DC68D21B5320.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.veldsink.nl/vestiging/veldsink-advies-nuenen/",
+        "name": "Veldsink / Regiobank",
+        "description": "Op zoek naar persoonlijk advies over verzekeringen, een hypotheek of pensioen in Nuenen? Wij helpen je graag bij alle financiële vraagstukken.",
+        "url": "https://www.veldsink.nl/vestiging/veldsink-advies-nuenen/",
+        "telephone": "051462349",
+        "image": "https://www.veldsink.nl/wp-content/uploads/2017/10/Veldsink-Advies-Nuenen-1.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.jumbo.com/winkel/nuenen/jumbo-nuenen-kernkwartier",
+        "name": "Jumbo Kernkwartier",
+        "description": "Hallo, hier vind je alles voor de leukste boodschappen: laagste prijsgarantie, boodschappen thuisbezorgen en heerlijke recepten.",
+        "url": "https://www.jumbo.com/winkel/nuenen/jumbo-nuenen-kernkwartier",
+        "telephone": "0402952650",
+        "image": "https://www.jumbo.com/dam/jumbo/winkel.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.rabobank.nl/particulieren/lokalebanken/dommelstreek/",
+        "name": "Rabobank Dommelstreek",
+        "description": "Actief in jouw omgeving, samen met onze klanten en leden. Dat is Rabobank Regio Eindhoven. Lees over onze dienstverlening en lokale initiatieven.",
+        "url": "https://www.rabobank.nl/particulieren/lokalebanken/dommelstreek/",
+        "telephone": "061863926",
+        "image": "https://media.rabobank.com/m/65378ce193fdbb3/original/header-home-RegioEindhoven-2220x760-jpg.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.inverta.nl/",
+        "name": "Inverta",
+        "description": "Winkel gerund met behulp van PrestaShop",
+        "url": "https://www.inverta.nl/",
+        "telephone": "06 17280440",
+        "image": "https://www.inverta.nl/modules/angarslider/views/img/images/8d80a4cb66a39d9082e7601e5d36d5a9e8492975_Slider 1.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.ajansenbv.com/",
+        "name": "A. Jansen BV",
+        "description": "Circulair ondernemen op het gebied van infra, beton, betonblokken, grond- en sloopwerken, wegenbouw, recycling, transport en verhuur.",
+        "url": "https://www.ajansenbv.com/",
+        "telephone": "+31 88 877 87 78",
+        "image": "https://www.ajansenbv.com/wp-content/themes/ajansen/images/png/lb-w.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.wilnutaxi.nl/",
+        "name": "Wilnu Taxi",
+        "description": "Taxi nodig? Reserveer eenvoudig online uw taxi en ontdek de voordelen van vooruit boeken. Bereken direct de ritprijs en plan uw taxirit!",
+        "url": "https://www.wilnutaxi.nl/",
+        "telephone": "0402097241",
+        "image": "https://wilnutaxi.nl/wp-content/uploads/2024/03/Group-4041@2x-1024x992-1.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.facebook.com/winkelcentrumkernkwartier/",
+        "name": "Facebook",
+        "description": "Winkelcentrum Kernkwartier Nuenen, Nuenen. 3.462 vind-ik-leuks &#xb7; 21 personen praten hierover &#xb7; 78 waren hier. Welkom op de pagina van Winkelcentrum het Kernkwartier in Nuenen. Op deze pagina kunt u...",
+        "url": "https://www.facebook.com/winkelcentrumkernkwartier/",
+        "telephone": "00063480103",
+        "image": "https://scontent-cdg4-1.xx.fbcdn.net/v/t39.30808-1/235900388_869327973726609_178349243216446294_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx959x959&amp;ctp=s720x720&amp;_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=3ab345&amp;_nc_ohc=XgDOByJ9vUMQ7kNvwFI91jX&amp;_nc_oc=AdoVA4Uwj_Wzcd2iAx3phcpUFSunEWXJQn5VM4cWIGlbmfFEakax7zkdt0atY79ZpdA&amp;_nc_zt=24&amp;_nc_ht=scontent-cdg4-1.xx&amp;_nc_gid=mJTh0hugXmpCw6B51XpsHQ&amp;oh=00_Af0tK7nlfCY9q7lfBkND8-ydnz6i0DcvO45_Idu-fBUbbw&amp;oe=69F13629",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": "https://ekri-arte.nl/",
+        "name": "Ekri Arte",
+        "description": "Bij tekstbureau Ekri-ARTe in Nuenen (NB) werken gepassioneerde tekstschrijvers aan alle soorten (wetenschappelijke) artikelen, webteksten en blogs.",
+        "url": "https://ekri-arte.nl/",
+        "telephone": "0625297926",
+        "image": "https://ekri-arte.nl/wp-content/uploads/2020/06/Ekri-Arte-.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nuenen",
+          "addressRegion": "Noord-Brabant",
+          "addressCountry": "NL"
+        }
+      }
+    }
+  ]
+}
