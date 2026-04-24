@@ -584,6 +584,44 @@
       cursor: pointer;
     }
 
+    /* ── ALERT CARDS ── */
+    .alert-card {
+      background: white;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      border-left: 4px solid #ccc;
+    }
+    .alert-card.brandweer { border-left-color: #e63946; }
+    .alert-card.ambulance { border-left-color: #f4a261; }
+    .alert-card.politie   { border-left-color: #457b9d; }
+    .alert-card.overig    { border-left-color: #aaa; }
+    .alert-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+    .alert-body { flex: 1; min-width: 0; }
+    .alert-text {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 4px;
+      word-break: break-word;
+    }
+    .alert-time {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .alert-disclaimer {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-align: center;
+      padding: 16px 0 8px;
+      line-height: 1.5;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 480px) {
       .nav-tab { padding: 14px 13px 12px; font-size: 0.82rem; gap: 4px; }
@@ -602,6 +640,7 @@
       <button class="nav-tab" data-page="deals">🔥 Deals</button>
       <button class="nav-tab" data-page="nieuwsbrieven">📧 Nieuwsbrieven</button>
       <button class="nav-tab" data-page="bedrijven">🏪 Bedrijven</button>
+      <button class="nav-tab" data-page="meldingen">🚨 Meldingen</button>
     </div>
   </nav>
 
@@ -771,6 +810,21 @@
     </div>
   </section>
 
+  <!-- ════════════════════ PAGE: MELDINGEN ════════════════════ -->
+  <section id="page-meldingen" class="page">
+    <div class="data-page-header">
+      <h1>🚨 112 Meldingen Nuenen</h1>
+      <p>Actuele P2000 meldingen — brandweer, ambulance, politie</p>
+    </div>
+    <div class="data-content">
+      <div id="meldingen-meta" class="meta-bar" style="display:none">
+        <span class="week-badge">🔄 Bijgewerkt <span id="meldingen-time"></span></span>
+        <span class="updated" id="meldingen-count"></span>
+      </div>
+      <div id="meldingen-list"></div>
+    </div>
+  </section>
+
   <!-- FB POST MODAL -->
   <div class="fb-modal-overlay" id="fb-modal-overlay" onclick="closeFbModal(event)">
     <div class="fb-modal" onclick="event.stopPropagation()">
@@ -800,12 +854,17 @@
     let bizLoading= false;
     let bizError  = false;
 
-    const DATA_PAGES = ['vacatures', 'deals', 'nieuwsbrieven', 'bedrijven'];
+    let p2000Data   = null;
+    let p2000Loaded = false;
+    let p2000Loading= false;
+    let p2000Error  = false;
+
+    const DATA_PAGES = ['vacatures', 'deals', 'nieuwsbrieven', 'bedrijven', 'meldingen'];
 
     // ── Routing ────────────────────────────────────────────────────
     function getHashPage() {
       const h = location.hash.replace('#', '').toLowerCase();
-      return ['vacatures', 'deals', 'nieuwsbrieven', 'bedrijven'].includes(h) ? h : 'home';
+      return ['vacatures', 'deals', 'nieuwsbrieven', 'bedrijven', 'meldingen'].includes(h) ? h : 'home';
     }
 
     function showPage(name) {
@@ -909,6 +968,19 @@
 
       if (!listEl) return;
 
+      if (name === 'meldingen') {
+        if (!p2000Loaded && !p2000Loading) {
+          listEl.innerHTML = spinnerHTML();
+          fetchP2000().then(() => populateMeldingen(listEl, metaEl));
+        } else if (p2000Loading) {
+          listEl.innerHTML = skeletonHTML();
+          waitForP2000().then(() => populateMeldingen(listEl, metaEl));
+        } else {
+          populateMeldingen(listEl, metaEl);
+        }
+        return;
+      }
+
       if (name === 'bedrijven') {
         if (!bizLoaded && !bizLoading) {
           listEl.innerHTML = spinnerHTML();
@@ -985,6 +1057,70 @@
           'Wordt elke donderdag bijgewerkt. Mis niks — doe mee via WhatsApp!'
         );
       }
+    }
+
+    // ── Fetch P2000 ────────────────────────────────────────────
+    function fetchP2000() {
+      p2000Loading = true;
+      return fetch('./data/p2000.json')
+        .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+        .then(json => { p2000Data = json; p2000Loaded = true; p2000Loading = false; p2000Error = false; })
+        .catch(() => { p2000Loaded = true; p2000Loading = false; p2000Error = true; });
+    }
+
+    function waitForP2000() {
+      return new Promise(resolve => {
+        const check = () => p2000Loaded ? resolve() : setTimeout(check, 80);
+        check();
+      });
+    }
+
+    function alertIcon(type) {
+      return { brandweer: '🚒', ambulance: '🚑', politie: '🚔', overig: '🔔' }[type] || '🔔';
+    }
+
+    function formatAlertTime(iso) {
+      if (!iso) return '';
+      try {
+        const d = new Date(iso);
+        const now = new Date();
+        const diff = now - d;
+        if (diff < 3600000) return Math.floor(diff / 60000) + ' min geleden';
+        if (diff < 86400000) return Math.floor(diff / 3600000) + ' uur geleden';
+        return d.toLocaleDateString('nl-NL', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+      } catch { return iso; }
+    }
+
+    function renderAlerts(alerts) {
+      if (!alerts || alerts.length === 0) return null;
+      return alerts.map(a => `
+        <div class="alert-card ${escapeHTML(a.type)}">
+          <div class="alert-icon">${alertIcon(a.type)}</div>
+          <div class="alert-body">
+            <div class="alert-text">${escapeHTML(a.text)}</div>
+            <div class="alert-time">${formatAlertTime(a.time)}</div>
+          </div>
+        </div>
+      `).join('') + '<p class="alert-disclaimer">P2000-data wordt elke 15 minuten bijgewerkt. Bel 112 bij nood.</p>';
+    }
+
+    function populateMeldingen(listEl, metaEl) {
+      if (p2000Error || !p2000Data) {
+        listEl.innerHTML = emptyHTML('🚨', 'Geen meldingen beschikbaar', 'P2000-data wordt elke 15 minuten bijgewerkt.');
+        return;
+      }
+      const alerts = p2000Data.alerts || [];
+      if (metaEl) {
+        const timeEl = document.getElementById('meldingen-time');
+        const countEl = document.getElementById('meldingen-count');
+        if (timeEl && p2000Data.updatedAt) {
+          const d = new Date(p2000Data.updatedAt);
+          timeEl.textContent = d.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' });
+        }
+        if (countEl) countEl.textContent = alerts.length > 0 ? alerts.length + ' meldingen gevonden' : 'Geen recente meldingen';
+        metaEl.style.display = '';
+      }
+      listEl.innerHTML = renderAlerts(alerts) || emptyHTML('✅', 'Rustig in Nuenen', 'Geen recente P2000-meldingen gevonden voor Nuenen of postcode 5671.');
     }
 
     // ── Fetch businesses ───────────────────────────────────────────
