@@ -8,7 +8,7 @@
   <meta property="og:title" content="LocalCircle Nuenen" />
   <meta property="og:description" content="Gratis wekelijks overzicht van vacatures, aanbiedingen en nieuws uit Nuenen — rechtstreeks op je telefoon." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -32,17 +32,16 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --green:   #2D6A4F;
-      --mid:     #40916C;
-      --light-g: #74C69D;
-      --dark:    #1B2F23;
-      --text:    #1e2d1f;
-      --muted:   #5a6b5a;
-      --light:   #f4faf6;
+      --green:   #92d43a;
+      --mid:     #7aba2e;
+      --dark:    #313131;
+      --text:    #000000;
+      --muted:   #555555;
+      --light:   #f9f9f9;
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Open Sans', Arial, sans-serif;
       background: var(--light);
       color: var(--text);
       min-height: 100vh;
@@ -53,11 +52,10 @@
     /* ── NAV ── */
     nav {
       background: white;
-      border-bottom: 1px solid rgba(45,106,79,0.12);
+      border-bottom: 1px solid #92d43a;
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
     }
     .nav-inner {
       display: flex;
@@ -89,11 +87,11 @@
       border-top: none;
       border-left: none;
       border-right: none;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Open Sans', Arial, sans-serif;
     }
     .nav-tab:hover { color: var(--green); }
     .nav-tab.active {
-      color: var(--green);
+      color: #000000;
       border-bottom-color: var(--green);
     }
 
@@ -103,28 +101,11 @@
 
     /* ── HERO ── */
     .hero {
-      background: linear-gradient(135deg, var(--green) 0%, var(--mid) 100%);
-      color: white;
+      background: #92d43a;
+      color: #000000;
       padding: 60px 24px 80px;
       text-align: center;
       position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -80px; right: -80px;
-      width: 300px; height: 300px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.07);
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: -100px; left: -60px;
-      width: 250px; height: 250px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.05);
     }
     .logo-wrap {
       display: inline-block;
@@ -139,8 +120,8 @@
     }
     .hero p.sub {
       font-size: clamp(1rem, 3vw, 1.2rem);
-      font-weight: 300;
-      opacity: 0.92;
+      font-weight: 400;
+      color: #000000;
       max-width: 520px;
       margin: 0 auto 32px;
       line-height: 1.6;
@@ -149,26 +130,27 @@
     .cta-btn {
       display: inline-block;
       background: white;
-      color: var(--green);
+      color: #000000;
       font-weight: 700;
       font-size: 1.05rem;
       padding: 16px 36px;
-      border-radius: 50px;
+      border-radius: 4px;
       text-decoration: none;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-      transition: transform 0.15s, box-shadow 0.15s;
+      border: 1px solid #000000;
+      transition: transform 0.15s;
       position: relative;
     }
-    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.2); }
+    .cta-btn:hover { transform: translateY(-2px); }
     .hero-note {
       margin-top: 16px;
       font-size: 0.82rem;
-      opacity: 0.75;
+      color: #000000;
+      opacity: 0.6;
       position: relative;
     }
 
     /* ── WAVE ── */
-    .wave { display: block; margin-top: -2px; }
+    .wave { display: none; }
 
     /* ── FEATURES ── */
     .features {
@@ -215,8 +197,8 @@
     .step { flex: 1 1 180px; max-width: 200px; }
     .step .num {
       width: 48px; height: 48px;
-      background: linear-gradient(135deg, var(--green), var(--mid));
-      color: white;
+      background: var(--green);
+      color: #000000;
       border-radius: 50%;
       font-weight: 800;
       font-size: 1.2rem;
@@ -255,46 +237,35 @@
     }
     .cta-btn-green {
       display: inline-block;
-      background: linear-gradient(135deg, var(--green), var(--mid));
-      color: white;
+      background: var(--green);
+      color: #000000;
       font-weight: 700;
       font-size: 1.05rem;
       padding: 16px 36px;
-      border-radius: 50px;
+      border-radius: 4px;
       text-decoration: none;
-      box-shadow: 0 4px 20px rgba(45,106,79,0.35);
-      transition: transform 0.15s, box-shadow 0.15s;
+      transition: transform 0.15s;
     }
-    .cta-btn-green:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(45,106,79,0.45); }
+    .cta-btn-green:hover { transform: translateY(-2px); }
 
     /* ── DATA PAGES (Vacatures / Deals / Nieuwsbrieven) ── */
     .data-page-header {
-      background: linear-gradient(135deg, var(--green) 0%, var(--mid) 100%);
-      color: white;
+      background: #92d43a;
+      color: #000000;
       padding: 48px 24px 56px;
       text-align: center;
       position: relative;
-      overflow: hidden;
-    }
-    .data-page-header::before {
-      content: '';
-      position: absolute;
-      top: -60px; right: -60px;
-      width: 220px; height: 220px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.07);
     }
     .data-page-header h1 {
       font-size: clamp(1.6rem, 5vw, 2.4rem);
       font-weight: 800;
       margin-bottom: 10px;
-      position: relative;
+      color: #000000;
     }
     .data-page-header p {
       font-size: 1rem;
-      opacity: 0.88;
-      font-weight: 300;
-      position: relative;
+      font-weight: 400;
+      color: #000000;
     }
 
     .data-content {
@@ -311,7 +282,7 @@
       border-radius: 12px;
       padding: 20px 24px;
       margin-bottom: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
       border-left: 4px solid var(--green);
     }
     .item-card-name {
@@ -347,14 +318,14 @@
       gap: 8px;
       margin-bottom: 24px;
       padding-bottom: 16px;
-      border-bottom: 1px solid rgba(45,106,79,0.1);
+      border-bottom: 1px solid rgba(146,212,58,0.2);
     }
     .meta-bar .week-badge {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(45,106,79,0.1);
-      color: var(--green);
+      background: rgba(146,212,58,0.2);
+      color: #313131;
       font-weight: 700;
       font-size: 0.82rem;
       padding: 5px 12px;
@@ -372,12 +343,12 @@
       border-radius: 12px;
       padding: 20px 24px;
       margin-bottom: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-      border-left: 4px solid rgba(45,106,79,0.2);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      border-left: 4px solid rgba(146,212,58,0.3);
     }
     .skel-line {
       height: 14px;
-      background: linear-gradient(90deg, #e8f0ec 25%, #d4e8dc 50%, #e8f0ec 75%);
+      background: linear-gradient(90deg, #f0f7e6 25%, #e2f0cc 50%, #f0f7e6 75%);
       background-size: 200% 100%;
       border-radius: 6px;
       margin-bottom: 10px;
@@ -409,8 +380,8 @@
     }
     .spinner {
       width: 36px; height: 36px;
-      border: 3px solid rgba(45,106,79,0.15);
-      border-top-color: var(--green);
+      border: 3px solid rgba(146,212,58,0.2);
+      border-top-color: #92d43a;
       border-radius: 50%;
       animation: spin 0.7s linear infinite;
     }
@@ -418,13 +389,13 @@
 
     /* ── FOOTER ── */
     footer {
-      background: var(--dark);
-      color: rgba(255,255,255,0.5);
+      background: #000000;
+      color: rgba(255,255,255,0.6);
       text-align: center;
       padding: 28px 24px;
       font-size: 0.82rem;
     }
-    footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
 
     /* ── BUSINESS CARDS ── */
     .biz-grid {
@@ -436,12 +407,12 @@
       background: white;
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
       display: flex;
       flex-direction: column;
-      transition: transform 0.15s, box-shadow 0.15s;
+      transition: box-shadow 0.15s;
     }
-    .biz-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,0,0,0.12); }
+    .biz-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
     .biz-img-wrap {
       width: 100%;
       height: 160px;
@@ -461,7 +432,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, rgba(45,106,79,0.08), rgba(64,145,108,0.12));
+      background: rgba(146,212,58,0.1);
       font-size: 3.5rem;
     }
     .biz-body {
@@ -472,8 +443,8 @@
     }
     .biz-cat {
       display: inline-block;
-      background: rgba(45,106,79,0.1);
-      color: var(--green);
+      background: rgba(146,212,58,0.15);
+      color: #000000;
       font-size: 0.75rem;
       font-weight: 700;
       padding: 3px 10px;
@@ -512,7 +483,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 8px;
-      border-top: 1px solid rgba(45,106,79,0.08);
+      border-top: 1px solid rgba(146,212,58,0.15);
       padding-top: 12px;
       margin-top: auto;
     }
@@ -527,7 +498,7 @@
       padding: 7px 13px;
       font-size: 0.78rem;
       font-weight: 600;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Open Sans', Arial, sans-serif;
       cursor: pointer;
       transition: background 0.15s, transform 0.1s;
       white-space: nowrap;
@@ -570,10 +541,10 @@
     .fb-modal textarea {
       width: 100%;
       height: 180px;
-      border: 1.5px solid rgba(45,106,79,0.25);
+      border: 1.5px solid rgba(146,212,58,0.35);
       border-radius: 10px;
       padding: 14px;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Open Sans', Arial, sans-serif;
       font-size: 0.88rem;
       line-height: 1.55;
       color: var(--text);
@@ -595,7 +566,7 @@
       padding: 12px;
       font-size: 0.92rem;
       font-weight: 700;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Open Sans', Arial, sans-serif;
       cursor: pointer;
       transition: background 0.15s;
     }
@@ -609,7 +580,7 @@
       padding: 12px 18px;
       font-size: 0.92rem;
       font-weight: 600;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Open Sans', Arial, sans-serif;
       cursor: pointer;
     }
 
@@ -643,8 +614,8 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="110" height="110" style="border-radius:50%;box-shadow:0 8px 32px rgba(0,0,0,0.2)">
           <defs>
             <linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#2D6A4F"/>
-              <stop offset="100%" style="stop-color:#40916C"/>
+              <stop offset="0%" style="stop-color:#92d43a"/>
+              <stop offset="100%" style="stop-color:#7aba2e"/>
             </linearGradient>
           </defs>
           <circle cx="200" cy="200" r="200" fill="url(#lg)"/>
@@ -658,8 +629,8 @@
           <circle cx="130" cy="118" r="8"  fill="white" opacity="0.7"/>
           <path d="M200 148 C183 148 170 161 170 178 C170 200 200 228 200 228 C200 228 230 200 230 178 C230 161 217 148 200 148Z" fill="white" opacity="0.95"/>
           <circle cx="200" cy="178" r="10" fill="url(#lg)"/>
-          <text x="200" y="338" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="white" text-anchor="middle">LocalCircle</text>
-          <text x="200" y="364" font-family="Arial,sans-serif" font-size="18" font-weight="300" fill="white" text-anchor="middle" opacity="0.8" letter-spacing="2">NUENEN</text>
+          <text x="200" y="338" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="white" text-anchor="middle">LocalCircle</text>
+          <text x="200" y="364" font-family="Arial,sans-serif" font-size="18" font-weight="300" fill="white" text-anchor="middle" opacity="0.8" letter-spacing="3">NUENEN</text>
         </svg>
       </div>
 
