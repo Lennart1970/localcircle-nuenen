@@ -9,6 +9,25 @@
   <meta property="og:description" content="Gratis wekelijks overzicht van vacatures, aanbiedingen en nieuws uit Nuenen — rechtstreeks op je telefoon." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "LocalCircle Nuenen",
+    "url": "https://localcircle-nuenen-production.up.railway.app/",
+    "description": "Gratis wekelijks overzicht van vacatures, aanbiedingen en lokaal nieuws uit Nuenen — rechtstreeks in je WhatsApp.",
+    "about": {
+      "@type": "Place",
+      "name": "Nuenen",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nuenen",
+        "addressRegion": "Noord-Brabant",
+        "addressCountry": "NL"
+      }
+    }
+  }
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1113,6 +1132,43 @@
       return emojiMatch ? emojiMatch[0] : '🏪';
     }
 
+    // ── Inject JSON-LD schema for businesses ───────────────────────
+    function injectBusinessSchema(businesses) {
+      const existing = document.getElementById('biz-schema-ld');
+      if (existing) existing.remove();
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Lokale bedrijven Nuenen",
+        "url": "https://localcircle-nuenen-production.up.railway.app/#bedrijven",
+        "numberOfItems": businesses.length,
+        "itemListElement": businesses.map((b, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "item": {
+            "@type": "LocalBusiness",
+            "@id": b.url || '',
+            "name": b.name,
+            "description": b.description || '',
+            "url": b.url || '',
+            "telephone": b.phone || '',
+            "image": b.ogImage || '',
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Nuenen",
+              "addressRegion": "Noord-Brabant",
+              "addressCountry": "NL"
+            }
+          }
+        }))
+      };
+      const el = document.createElement('script');
+      el.id = 'biz-schema-ld';
+      el.type = 'application/ld+json';
+      el.textContent = JSON.stringify(schema);
+      document.head.appendChild(el);
+    }
+
     // ── Populate bedrijven page ────────────────────────────────────
     function populateBedrijven(listEl, metaEl) {
       if (bizError || !bizData) {
@@ -1129,6 +1185,8 @@
       }
       const html = renderBizCards(businesses);
       listEl.innerHTML = html || emptyHTML('🏪', 'Nog geen bedrijven', 'We vullen dit snel aan!');
+      // Inject JSON-LD for businesses
+      injectBusinessSchema(businesses);
     }
 
     // ── Fetch data ─────────────────────────────────────────────────
