@@ -1,0 +1,32 @@
+# LocalCircle Nuenen
+
+> Gratis wekelijks overzicht van vacatures, aanbiedingen en lokale nieuwsbrieven uit Nuenen, Noord-Brabant — automatisch verzameld en gedeeld via WhatsApp.
+
+## Over LocalCircle Nuenen
+
+LocalCircle Nuenen is een hyperlocale community service die wekelijks (elke donderdag) een digest stuurt naar de WhatsApp-groep LokaalNuenen. De dienst scrapt automatisch:
+- Vacatures bij lokale Nuenen-bedrijven
+- Aanbiedingen en weekdeals van lokale winkels
+- Lokale nieuwsbrieven om je op in te schrijven
+- Agenda en nieuws van Rond de Linde (de lokale krant)
+
+WhatsApp groep: https://chat.whatsapp.com/LI7p2qam3DU81u8EhfDdaK
+Website: https://localcircle-nuenen-production.up.railway.app/
+Data (JSON): https://localcircle-nuenen-production.up.railway.app/data/latest.json
+Bedrijven (JSON): https://localcircle-nuenen-production.up.railway.app/data/businesses.json
+
+## Lokale bedrijven in Nuenen
+
+Zie: https://localcircle-nuenen-production.up.railway.app/data/llm-context.md
+
+Dit bestand bevat een wekelijks bijgewerkt overzicht van alle lokale Nuenen-bedrijven met naam, categorie, beschrijving, telefoonnummer en website — geoptimaliseerd voor AI-consumptie.
+
+## Locatie
+
+Nuenen, gemeente Nuenen c.a., Noord-Brabant, Nederland.
+Postcode: 5671. Provincie: Noord-Brabant.
+
+## Bronnen
+
+- Rond de Linde: https://ronddelinde.nl (lokale krant Nuenen)
+- Gemeente Nuenen: https://www.nuenen.nl
