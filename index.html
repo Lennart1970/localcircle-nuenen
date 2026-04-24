@@ -407,6 +407,193 @@
     }
     footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
 
+    /* ── BUSINESS CARDS ── */
+    .biz-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+    .biz-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .biz-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,0,0,0.12); }
+    .biz-img-wrap {
+      width: 100%;
+      height: 160px;
+      overflow: hidden;
+      background: var(--light);
+      position: relative;
+    }
+    .biz-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .biz-img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(45,106,79,0.08), rgba(64,145,108,0.12));
+      font-size: 3.5rem;
+    }
+    .biz-body {
+      padding: 18px 20px 16px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .biz-cat {
+      display: inline-block;
+      background: rgba(45,106,79,0.1);
+      color: var(--green);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      width: fit-content;
+    }
+    .biz-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text);
+      line-height: 1.3;
+    }
+    .biz-desc {
+      font-size: 0.86rem;
+      color: var(--muted);
+      line-height: 1.55;
+      margin-bottom: 14px;
+      flex: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .biz-phone {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .biz-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      border-top: 1px solid rgba(45,106,79,0.08);
+      padding-top: 12px;
+      margin-top: auto;
+    }
+    .fb-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #1877F2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 7px 13px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .fb-btn:hover { background: #166fe5; }
+    .fb-btn.copied { background: #28a745; }
+    .biz-count {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .fb-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .fb-modal-overlay.open { display: flex; }
+    .fb-modal {
+      background: white;
+      border-radius: 20px;
+      padding: 28px 24px 24px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+    }
+    .fb-modal h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .fb-modal textarea {
+      width: 100%;
+      height: 180px;
+      border: 1.5px solid rgba(45,106,79,0.25);
+      border-radius: 10px;
+      padding: 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: var(--text);
+      resize: vertical;
+      outline: none;
+    }
+    .fb-modal textarea:focus { border-color: var(--green); }
+    .fb-modal-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .fb-modal-copy {
+      flex: 1;
+      background: #1877F2;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .fb-modal-copy:hover { background: #166fe5; }
+    .fb-modal-copy.copied { background: #28a745; }
+    .fb-modal-close {
+      background: var(--light);
+      color: var(--muted);
+      border: none;
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 480px) {
       .nav-tab { padding: 14px 13px 12px; font-size: 0.82rem; gap: 4px; }
@@ -424,6 +611,7 @@
       <button class="nav-tab" data-page="vacatures">💼 Vacatures</button>
       <button class="nav-tab" data-page="deals">🔥 Deals</button>
       <button class="nav-tab" data-page="nieuwsbrieven">📧 Nieuwsbrieven</button>
+      <button class="nav-tab" data-page="bedrijven">🏪 Bedrijven</button>
     </div>
   </nav>
 
@@ -578,6 +766,33 @@
     </div>
   </section>
 
+  <!-- ════════════════════ PAGE: BEDRIJVEN ════════════════════ -->
+  <section id="page-bedrijven" class="page">
+    <div class="data-page-header">
+      <h1>🏪 Lokale Ondernemers</h1>
+      <p>Nuenen op z'n best — ontdek de lokale bedrijven</p>
+    </div>
+    <div class="data-content">
+      <div id="bedrijven-meta" class="meta-bar" style="display:none">
+        <span class="week-badge">📅 Bijgewerkt <span id="bedrijven-date"></span></span>
+        <span class="updated" id="bedrijven-count"></span>
+      </div>
+      <div id="bedrijven-list"></div>
+    </div>
+  </section>
+
+  <!-- FB POST MODAL -->
+  <div class="fb-modal-overlay" id="fb-modal-overlay" onclick="closeFbModal(event)">
+    <div class="fb-modal" onclick="event.stopPropagation()">
+      <h3>📘 Facebook Post</h3>
+      <textarea id="fb-post-text" readonly></textarea>
+      <div class="fb-modal-actions">
+        <button class="fb-modal-copy" id="fb-modal-copy-btn" onclick="copyFbPostText()">📋 Kopiëren</button>
+        <button class="fb-modal-close" onclick="closeFbModal()">Sluiten</button>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer>
     <p>© 2026 LocalCircle · Nuenen, Noord-Brabant · Geen spam, nooit.</p>
@@ -590,12 +805,17 @@
     let dataLoading = false;
     let dataError   = false;
 
-    const DATA_PAGES = ['vacatures', 'deals', 'nieuwsbrieven'];
+    let bizData   = null;
+    let bizLoaded = false;
+    let bizLoading= false;
+    let bizError  = false;
+
+    const DATA_PAGES = ['vacatures', 'deals', 'nieuwsbrieven', 'bedrijven'];
 
     // ── Routing ────────────────────────────────────────────────────
     function getHashPage() {
       const h = location.hash.replace('#', '').toLowerCase();
-      return ['vacatures', 'deals', 'nieuwsbrieven'].includes(h) ? h : 'home';
+      return ['vacatures', 'deals', 'nieuwsbrieven', 'bedrijven'].includes(h) ? h : 'home';
     }
 
     function showPage(name) {
@@ -699,6 +919,19 @@
 
       if (!listEl) return;
 
+      if (name === 'bedrijven') {
+        if (!bizLoaded && !bizLoading) {
+          listEl.innerHTML = spinnerHTML();
+          fetchBizData().then(() => populateBedrijven(listEl, metaEl));
+        } else if (bizLoading) {
+          listEl.innerHTML = skeletonHTML();
+          waitForBiz().then(() => populateBedrijven(listEl, metaEl));
+        } else {
+          populateBedrijven(listEl, metaEl);
+        }
+        return;
+      }
+
       if (!dataLoaded && !dataLoading) {
         // First time: show spinner and fetch
         listEl.innerHTML = spinnerHTML();
@@ -762,6 +995,140 @@
           'Wordt elke donderdag bijgewerkt. Mis niks — doe mee via WhatsApp!'
         );
       }
+    }
+
+    // ── Fetch businesses ───────────────────────────────────────────
+    function fetchBizData() {
+      bizLoading = true;
+      return fetch('./data/businesses.json')
+        .then(r => {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json();
+        })
+        .then(json => {
+          bizData    = json;
+          bizLoaded  = true;
+          bizLoading = false;
+          bizError   = false;
+        })
+        .catch(() => {
+          bizLoaded  = true;
+          bizLoading = false;
+          bizError   = true;
+        });
+    }
+
+    function waitForBiz() {
+      return new Promise(resolve => {
+        const check = () => bizLoaded ? resolve() : setTimeout(check, 80);
+        check();
+      });
+    }
+
+    // ── Build FB post text ─────────────────────────────────────────
+    function buildFbPost(biz) {
+      const lines = [];
+      lines.push(`🏪 ${biz.name}`);
+      if (biz.category) lines.push(biz.category);
+      lines.push('');
+      if (biz.description) lines.push(biz.description);
+      else lines.push('Een geweldig lokaal bedrijf in Nuenen!');
+      lines.push('');
+      if (biz.phone) lines.push(`📞 ${biz.phone}`);
+      if (biz.url) lines.push(`🌐 ${biz.url}`);
+      lines.push('');
+      lines.push('#Nuenen #LocalBusiness #LocalCircle #Nuenenbedrijven');
+      return lines.join('\n');
+    }
+
+    // ── FB Modal ───────────────────────────────────────────────────
+    function openFbModal(biz) {
+      const post = buildFbPost(biz);
+      document.getElementById('fb-post-text').value = post;
+      document.getElementById('fb-modal-copy-btn').textContent = '📋 Kopiëren';
+      document.getElementById('fb-modal-copy-btn').classList.remove('copied');
+      document.getElementById('fb-modal-overlay').classList.add('open');
+    }
+
+    function closeFbModal(e) {
+      if (e && e.target !== document.getElementById('fb-modal-overlay')) return;
+      document.getElementById('fb-modal-overlay').classList.remove('open');
+    }
+
+    function copyFbPostText() {
+      const ta = document.getElementById('fb-post-text');
+      const btn = document.getElementById('fb-modal-copy-btn');
+      navigator.clipboard.writeText(ta.value).then(() => {
+        btn.textContent = '✅ Gekopieerd!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = '📋 Kopiëren';
+          btn.classList.remove('copied');
+        }, 2500);
+      }).catch(() => {
+        ta.select();
+        document.execCommand('copy');
+        btn.textContent = '✅ Gekopieerd!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = '📋 Kopiëren'; btn.classList.remove('copied'); }, 2500);
+      });
+    }
+
+    // ── Render business cards ──────────────────────────────────────
+    function renderBizCards(businesses) {
+      if (!businesses || businesses.length === 0) return null;
+      return '<div class="biz-grid">' + businesses.map((biz, idx) => {
+        const imgHtml = biz.ogImage
+          ? `<img class="biz-img" src="${escapeHTML(biz.ogImage)}" alt="${escapeHTML(biz.name)}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=biz-img-placeholder>🏪</div>'">`
+          : `<div class="biz-img-placeholder">${categoryEmoji(biz.category)}</div>`;
+
+        const phone = biz.phone
+          ? `<div class="biz-phone">📞 <a href="tel:${escapeHTML(biz.phone.replace(/\s/g,''))}" style="color:var(--muted);text-decoration:none">${escapeHTML(biz.phone)}</a></div>`
+          : '';
+
+        const siteLink = biz.url
+          ? `<a class="item-card-link" href="${escapeHTML(biz.url)}" target="_blank" rel="noopener">Bezoek website →</a>`
+          : '<span></span>';
+
+        return `
+          <div class="biz-card" data-biz-idx="${idx}">
+            <div class="biz-img-wrap">${imgHtml}</div>
+            <div class="biz-body">
+              <span class="biz-cat">${escapeHTML(biz.category || '📌 Overig')}</span>
+              <h3 class="biz-name">${escapeHTML(biz.name)}</h3>
+              ${biz.description ? `<p class="biz-desc">${escapeHTML(biz.description)}</p>` : ''}
+              ${phone}
+              <div class="biz-footer">
+                ${siteLink}
+                <button class="fb-btn" onclick="openFbModal(bizData.businesses[${idx}])">📘 FB Post</button>
+              </div>
+            </div>
+          </div>`;
+      }).join('') + '</div>';
+    }
+
+    function categoryEmoji(cat) {
+      if (!cat) return '🏪';
+      const emojiMatch = cat.match(/^\S+/);
+      return emojiMatch ? emojiMatch[0] : '🏪';
+    }
+
+    // ── Populate bedrijven page ────────────────────────────────────
+    function populateBedrijven(listEl, metaEl) {
+      if (bizError || !bizData) {
+        listEl.innerHTML = emptyHTML('🏪', 'Bedrijfsinfo wordt geladen', 'Kom later terug — we verzamelen data van lokale Nuenen-bedrijven.');
+        return;
+      }
+      const businesses = bizData.businesses || [];
+      if (metaEl) {
+        const dateEl = document.getElementById('bedrijven-date');
+        const countEl = document.getElementById('bedrijven-count');
+        if (dateEl) dateEl.textContent = formatDate(bizData.updatedAt) || '–';
+        if (countEl) countEl.textContent = `${businesses.length} bedrijven`;
+        metaEl.style.display = '';
+      }
+      const html = renderBizCards(businesses);
+      listEl.innerHTML = html || emptyHTML('🏪', 'Nog geen bedrijven', 'We vullen dit snel aan!');
     }
 
     // ── Fetch data ─────────────────────────────────────────────────
